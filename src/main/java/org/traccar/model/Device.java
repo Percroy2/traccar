@@ -136,6 +136,16 @@ public class Device extends GroupedModel implements Disableable, Schedulable {
         this.category = category;
     }
 
+    private String licensePlate;
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate != null ? licensePlate.trim().toUpperCase() : null;
+    }
+
     private boolean disabled;
 
     @Override

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+<properties>
+    <entry key='config.default'>./conf/default.xml</entry>
+    
+    <!-- Configuration Base de Données PostgreSQL -->
+    <entry key='database.driver'>org.postgresql.Driver</entry>
+    <entry key='database.url'>jdbc:postgresql://YOUR_SERVER:5432/YOUR_DATABASE</entry>
+    <entry key='database.user'>YOUR_USERNAME</entry>
+    <entry key='database.password'>YOUR_PASSWORD</entry>
+    <entry key='database.ignoreUnknown'>false</entry>
+    <entry key='database.registerUnknown'>true</entry>
+    <entry key='database.registerUnknown.defaultCategory'>0</entry>
+    <entry key='database.registerUnknown.defaultGroupId'>12</entry>
+    
+    <!-- Configuration Web Server -->
+    <entry key='web.path'>./traccar-web/build</entry>
+    <entry key='web.port'>8082</entry>
+    <entry key='web.origin'>*</entry>
+    <entry key='web.debug'>true</entry>
+    
+    <!-- Configuration Email -->
+    <entry key='mail.smtp.host'>YOUR_SMTP_HOST</entry>
+    <entry key='mail.smtp.port'>465</entry>
+    <entry key='mail.smtp.ssl.enable'>true</entry>
+    <entry key='mail.smtp.from'>noreply@yourdomain.com</entry>
+    <entry key='mail.smtp.fromName'>Your Traccar</entry>
+    <entry key='mail.smtp.auth'>true</entry>
+    <entry key='mail.smtp.username'>YOUR_EMAIL_USERNAME</entry>
+    <entry key='mail.smtp.password'>YOUR_EMAIL_PASSWORD</entry>
+    
+    <!-- Configuration Notifications -->
+    <entry key='notificator.types'>telegram,web,mail,sms</entry>
+    
+    <!-- Configuration SMS -->
+    <entry key='sms.http.url'>https://www.traccar.org/sms/</entry>
+    <entry key='sms.http.authorization'>YOUR_SMS_AUTH_TOKEN</entry>
+    <entry key='sms.http.template'>{
+  "to": "{phone}",
+  "message": "{message}"
+}</entry>
+    
+    <!-- Configuration Telegram -->
+    <entry key='notificator.telegram.key'>YOUR_TELEGRAM_BOT_KEY</entry>
+    <entry key='notificator.telegram.chatId'>YOUR_TELEGRAM_CHAT_ID</entry>
+    
+    <!-- Configuration Geocoder -->
+    <entry key='geocoder.enable'>true</entry>
+    <entry key='geocoder.type'>nominatim</entry>
+    <entry key='geocoder.onRequest'>false</entry>
+    <entry key='geocoder.ignorePositions'>false</entry>
+    <entry key='geocoder.reuseDistance'>30</entry>
+    
+    <!-- Configuration Forwarding -->
+    <entry key='forward.enable'>true</entry>
+    <entry key='forward.json'>true</entry>
+    
+    <!-- Configuration Logging -->
+    <entry key='logger.fullStackTraces'>true</entry>
+    
+    <!-- Configuration Events -->
+    <entry key='event.motionHandler'>true</entry>
+    <entry key='event.geofenceHandler'>true</entry>
+    <entry key='event.alertHandler'>true</entry>
+    <entry key='event.ignitionHandler'>true</entry>
+    <entry key='event.statusHandler'>true</entry>
+    <entry key='event.maintenanceHandler'>true</entry>
+</properties>

@@ -118,6 +118,16 @@ public class ReverseSearchItem {
     public void setDistanceFromCenter(double distanceFromCenter) {
         this.distanceFromCenter = distanceFromCenter;
     }
+
+    private String licensePlate;
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
 }
 
 

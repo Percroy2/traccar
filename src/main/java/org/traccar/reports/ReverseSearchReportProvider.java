@@ -131,10 +131,11 @@ public class ReverseSearchReportProvider {
                         item.setGroupId(device.getGroupId());
                         item.setGroupName(groupNames.getOrDefault(device.getGroupId(), ""));
                         item.setEntryTime(position.getFixTime());
-                        item.setLatitude(position.getLatitude());
-                        item.setLongitude(position.getLongitude());
-                        item.setPositionId(position.getId());
-                        item.setDistanceFromCenter(distance);
+                               item.setLatitude(position.getLatitude());
+                               item.setLongitude(position.getLongitude());
+                               item.setPositionId(position.getId());
+                               item.setDistanceFromCenter(distance);
+                               item.setLicensePlate(device.getLicensePlate());
                         deviceResults.put(position.getId(), item);
                     }
                     lastPositionInZone = position;

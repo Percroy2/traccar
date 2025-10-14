@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+        logicalFilePath="changelog-6.10.2">
+
+  <changeSet author="percroy2" id="changelog-6.10.2-license-plate">
+
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <columnExists tableName="tc_devices" columnName="licenseplate" />
+      </not>
+    </preConditions>
+
+    <addColumn tableName="tc_devices">
+      <column name="licenseplate" type="VARCHAR(20)" />
+    </addColumn>
+
+    <createIndex indexName="tc_devices_licenseplate_idx" tableName="tc_devices">
+      <column name="licenseplate" />
+    </createIndex>
+
+  </changeSet>
+
+</databaseChangeLog>
