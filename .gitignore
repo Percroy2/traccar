@@ -22,3 +22,4 @@ bin
 traccar-*.xml
 debug.xml
 gradle.properties
+logs/tracker-server.log
