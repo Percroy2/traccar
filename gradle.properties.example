@@ -1,0 +1,8 @@
+# Configuration Java pour Traccar
+org.gradle.java.home=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot
+
+# Optimisation Gradle
+org.gradle.caching=true
+org.gradle.parallel=true
+
+# Note: Copy this file to gradle.properties and update paths for your system

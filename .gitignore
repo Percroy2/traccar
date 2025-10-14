@@ -12,3 +12,13 @@ out
 build
 .vscode
 bin
+
+# Documentation and scripts
+*.md
+*.ps1
+*.txt
+
+# Configuration files with sensitive data
+traccar-*.xml
+debug.xml
+gradle.properties
